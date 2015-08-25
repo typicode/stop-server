@@ -1,3 +1,4 @@
+var path = require('path')
 var cp = require('child_process')
 var util = require('util')
 var express = require('express')
@@ -8,7 +9,7 @@ var pkg = require('./package.json')
 var app = express()
 var notifier = updateNotifier({ pkg: pkg })
 
-app.use(express.static('public'))
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.delete('/', function (req, res) {
   res.end()
