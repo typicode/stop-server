@@ -1,4 +1,4 @@
-var path = require('path');
+var path = require('path')
 var cp = require('child_process')
 var util = require('util')
 var express = require('express')
