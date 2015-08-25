@@ -1,6 +1,6 @@
 # stop-server [![](https://badge.fury.io/js/stop-server.svg)](https://www.npmjs.com/package/stop-server) [![](https://travis-ci.org/typicode/stop-server.svg?branch=master)](https://travis-ci.org/typicode/stop-server)
 
-> Shutdown :zap: your computer using your phone or your tablet, from your bed or your couch ;)
+> Shutdown :zap: your computer using your phone or tablet, from your bed or couch ;)
 
 ![](http://i.imgur.com/lWW1LTE.png)
 
