@@ -1,0 +1,38 @@
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.42857;
+  padding-top: 50px;
+  background: #F85858;
+  text-align: center;
+  color: white;
+}
+
+#stop {
+  background: white;
+  color: #567;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 48px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* http://mystrd.at/modern-clean-css-sticky-footer/ */
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin-bottom: 40px; /* bottom = footer height */
+}
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+}

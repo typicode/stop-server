@@ -1,0 +1,40 @@
+{
+  "name": "stop-server",
+  "version": "0.1.0",
+  "description": "Stop your computer using your phone or your tablet, from your bed or your couch",
+  "main": "index.js",
+  "bin": "bin.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/typicode/stop-server.git"
+  },
+  "keywords": [
+    "stop",
+    "shutdown",
+    "halt",
+    "poweroff",
+    "server"
+  ],
+  "author": "typicode <typicode@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/typicode/stop-server/issues"
+  },
+  "homepage": "https://github.com/typicode/stop-server#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "got": "^4.1.1",
+    "meow": "^3.3.0",
+    "network-address": "^1.0.0",
+    "sudo-block": "^1.2.0",
+    "update-notifier": "^0.5.0",
+    "user-startup": "^0.1.0",
+    "yargs": "^3.21.0"
+  },
+  "devDependencies": {
+    "supertest": "^1.0.1"
+  }
+}

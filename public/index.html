@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>stop-server</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div id="stop" class="btn btn-default btn-lg">
+        <i class="fa fa-power-off"></i>_<i class="fa fa-power-off"></i>
+      </div>
+      <p>Touch to shutdown this computer</p>
+      <footer>
+        <a href="https://github.com/typicode/stop-server">stop-server v0.1.0</a>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script>
+      $('#stop').on('click', function () {
+
+        if (confirm('Please confirm')) {
+          $.post('/').fail(function (jqXHR) {
+            if (jqXHR.status === 0) return alert('Can\'t connect to server')
+            alert(jqXHR.responseJSON.error)
+          })
+        }
+
+      })
+
+      $.get('update', function (data) {
+        if (update.type && update.type !== 'latest') {
+          $('#footer').append('(new version available)')
+        }
+      })
+    </script>
+
+  </body>
+</html>
