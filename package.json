@@ -5,7 +5,8 @@
   "main": "index.js",
   "bin": "bin.js",
   "scripts": {
-    "test": "node test"
+    "test": "node test",
+    "uninstall": "node bin stop"
   },
   "repository": {
     "type": "git",
