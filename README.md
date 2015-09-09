@@ -4,11 +4,11 @@
 
 ![](http://i.imgur.com/lWW1LTE.png)
 
-_Requires Node. Works on OS X, Linux and Windows._
+_Requires Node.js and works on OS X, Linux and Windows._
 
 ## Why?
 
-For fun and because I usually watch movies on my computer.
+__For fun__ and because I usually watch movies on my computer.
 
 ## Install
 
