@@ -40,9 +40,7 @@ npm rm -g stop-server
 
 stop-server is a simple Express server. When you call `DELETE http://your-local-ip:5709`, it runs `poweroff` (OS X, Linux) or `shutdown` (Windows).
 
-stop-server is also automatically started on log in using [user-startup](https://github.com/typicode/user-startup).
-
-Actually, you just need `npm` and a browser to enjoy it.
+stop-server is automatically started on log in using [user-startup](https://github.com/typicode/user-startup).
 
 ## License
 
