@@ -1,6 +1,6 @@
 # stop-server [![](https://badge.fury.io/js/stop-server.svg)](https://www.npmjs.com/package/stop-server) [![](https://travis-ci.org/typicode/stop-server.svg?branch=master)](https://travis-ci.org/typicode/stop-server)
 
-> Shutdown :zap: your computer using your phone or tablet, from your bed or couch ;)
+> Shut down :zap: your computer using your phone or tablet, from your bed or couch ;)
 
 ![](http://i.imgur.com/lWW1LTE.png)
 
@@ -28,7 +28,7 @@ your-username ALL=NOPASSWD: /sbin/poweroff
 
 Visit [http://localhost:5709/qr.html](http://localhost:5709/qr.html) on your computer and scan the QR code or go directly to `http://your-local-ip:5709` from your phone/tablet.
 
-Now if you press the stop button, your computer will be shutdown.
+Now if you press the stop button, your computer will be shut down.
 
 ## Uninstall
 
