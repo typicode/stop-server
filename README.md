@@ -12,8 +12,9 @@ __For fun__ and because I usually watch movies on my computer.
 
 ## Install
 
-```
-npm install -g stop-server && stop-server start
+```bash
+npm install -g stop-server
+stop-server start # Need to be done only once
 ```
 
 Additionally, on __OS X__ and __Linux__ you need to allow the `poweroff` command to be used without admin password:
