@@ -20,8 +20,7 @@ stop-server start # Need to be done only once
 Additionally, on __OS X__ and __Linux__ you need to allow the `poweroff` command to be used without admin password:
 
 ```bash
-# Run 'sudo visudo'
-# Add
+# Run 'sudo visudo' and add
 your-username ALL=NOPASSWD: /sbin/poweroff
 ```
 
