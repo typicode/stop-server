@@ -1,6 +1,6 @@
 # stop-server [![](https://badge.fury.io/js/stop-server.svg)](https://www.npmjs.com/package/stop-server) [![](https://travis-ci.org/typicode/stop-server.svg?branch=master)](https://travis-ci.org/typicode/stop-server)
 
-> Shut down :zap: your computer using a browser (works on OS X, Linux and Windows)
+> Shut down :zap: your computer with your phone and a browser (works on OS X, Linux and Windows)
 
 _Created because I usually watch movies on my computer :)_
 
