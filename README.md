@@ -1,34 +1,30 @@
 # stop-server [![](https://badge.fury.io/js/stop-server.svg)](https://www.npmjs.com/package/stop-server) [![](https://travis-ci.org/typicode/stop-server.svg?branch=master)](https://travis-ci.org/typicode/stop-server)
 
-> Shut down :zap: your computer using your phone or tablet, from your bed or couch ;)
+> Shut down :zap: your computer using a browser (works on OS X, Linux and Windows)
 
-![](http://i.imgur.com/lWW1LTE.png)
+Created because I usually watch movies on my computer.
 
-_Requires Node.js and works on OS X, Linux and Windows._
+## Usage
 
-## Why?
+1. Install `stop-server`
 
-__For fun__ and because I usually watch movies on my computer.
+  ```bash
+  npm install -g stop-server
+  stop-server start # Need to be done only once
+  ```
 
-## Install
+2. Visit [http://localhost:5709/qr.html](http://localhost:5709/qr.html) on your computer and scan the QR code or go directly to `http://your-local-ip:5709` __on your phone/tablet__. You should see this page:
 
-```bash
-npm install -g stop-server
-stop-server start # Need to be done only once
-```
+  ![](http://i.imgur.com/lWW1LTE.png)
 
-Additionally, on __OS X__ and __Linux__ you need to allow the `poweroff` command to be used without admin password:
+3. That's all :)
+
+__Important__ on __OS X__ and __Linux__ you need to allow the `poweroff` command to be used without admin password:
 
 ```bash
 # Run 'sudo visudo' and add
 your-username ALL=NOPASSWD: /sbin/poweroff
 ```
-
-## Usage
-
-Visit [http://localhost:5709/qr.html](http://localhost:5709/qr.html) on your computer and scan the QR code or go directly to `http://your-local-ip:5709` from your phone/tablet.
-
-Now if you press the stop button, your computer will be shut down.
 
 ## Uninstall
 
