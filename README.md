@@ -2,7 +2,7 @@
 
 > Shut down :zap: your computer using a browser (works on OS X, Linux and Windows)
 
-Created because I usually watch movies on my computer.
+_Created because I usually watch movies on my computer :)_
 
 ## Usage
 
