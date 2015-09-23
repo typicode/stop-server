@@ -2,7 +2,7 @@
 
 > Shut down :zap: your computer with your phone and a browser (works on OS X, Linux and Windows)
 
-_Created because I usually watch movies on my computer :)_
+_Created because I usually watch movies on my computer from my bed and I wanted to be able to shut it down remotely :)_
 
 ## Usage
 
