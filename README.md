@@ -1,6 +1,6 @@
 # stop-server [![](https://badge.fury.io/js/stop-server.svg)](https://www.npmjs.com/package/stop-server) [![](https://travis-ci.org/typicode/stop-server.svg?branch=master)](https://travis-ci.org/typicode/stop-server)
 
-> Shut down :zap: your computer using Node and a phone (works on OS X, Linux and Windows)
+> Shut down :zap: your computer using Node.js and a phone (works on OS X, Linux and Windows)
 
 _Created because I usually watch movies on my computer from my bed and I wanted to be able to shut it down remotely :)_
 
