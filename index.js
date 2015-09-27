@@ -5,6 +5,7 @@ var express = require('express')
 var address = require('network-address')
 var updateNotifier = require('update-notifier')
 var pkg = require('./package.json')
+var powerOff = require('power-off')
 
 var app = express()
 var notifier = updateNotifier({ pkg: pkg })
@@ -18,13 +19,7 @@ app.delete('/', function (req, res) {
 })
 
 app.post('/', function (req, res) {
-  var cmd = process.platform === 'win32' ?
-    'shutdown -s' :
-    'sudo --non-interactive poweroff'
-
-  util.log('Running ' + cmd)
-
-  cp.exec(cmd, function (err, stderr, stdout) {
+  powerOff(function (err, stderr, stdout) {
     if (err) return res.status(500).json({ error: 'Can\'t run ' + cmd })
     res.end()
   })
