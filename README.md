@@ -13,22 +13,17 @@ _Created because I usually watch movies on my computer from my bed and I wanted 
   stop-server start # Need to be done only once
   ```
 
-2. Visit [http://localhost:5709/qr.html](http://localhost:5709/qr.html) on your computer and scan the QR code or go directly to `http://your-local-ip:5709` __on your phone/tablet__. You should see this page:
+2. Visit [http://localhost:5709/qr.html](http://localhost:5709/qr.html) on your computer and scan the QR code or go directly to `http://your-local-ip:5709` __on your phone__. You should see this page:
 
   ![](http://i.imgur.com/lWW1LTE.png)
 
 3. That's all :)
 
-__Important__ on __OS X__ and __Linux__ you need to allow `shutdown` or `poweroff` command to be used without admin password:
+__Important__ on __OS X__ and __Linux__ you need to allow `shutdown` command to be used without sudo:
 
 ```bash
-# On OS X, run 'sudo visudo' and uncomment/add
+# Run 'sudo visudo' and add
 %users  localhost=/sbin/shutdown -h now
-```
-
-```bash
-# On Linux, run 'sudo visudo' and add
-your-username ALL=NOPASSWD: /sbin/poweroff # Linux
 ```
 
 ## Uninstall
@@ -39,9 +34,9 @@ npm rm -g stop-server
 
 ## How it works?
 
-stop-server is a simple Express server. When you call `POST http://your-local-ip:5709`, it runs `poweroff` or `shutdown` command depending on the OS.
+stop-server is a simple Express server. When you call `POST http://your-local-ip:5709`, it runs `shutdown`.
 
-stop-server is automatically started on log in using [user-startup](https://github.com/typicode/user-startup).
+It's also automatically started on log in using [user-startup](https://github.com/typicode/user-startup).
 
 ## License
 

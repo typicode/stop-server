@@ -4,6 +4,7 @@ var path = require('path')
 var updateNotifier = require('update-notifier')
 var sudoBlock = require('sudo-block')
 var startup = require('user-startup')
+var chalk = require('chalk')
 var got = require('got')
 var address = require('network-address')
 var pkg = require('./package.json')
@@ -25,8 +26,10 @@ function start () {
     console.log(
       [
         '',
-        '  To complete installation, you need to allow the \'poweroff\' command to be run without admin password.',
-        '  Please run `sudo visudo` and add `your-username ALL=NOPASSWD: /sbin/poweroff`',
+        '---',
+        'To complete installation, you need to allow \'shutdown\' to be run without sudo.',
+        'Please run ' + chalk.cyan('sudo visudo') + ' and add ' + chalk.cyan('%users  localhost=/sbin/shutdown -h now'),
+        '---'
       ].join('\n')
     )
   }
@@ -34,8 +37,11 @@ function start () {
   console.log(
     [
       '',
-      '  Scan the QR code here http://localhost:5709/qr.html',
-      '  Or visit http://' + address() + ':5709 on your phone or tablet',
+      'To access stop-server from your phone, scan the QR code here',
+      chalk.cyan('http://localhost:5709/qr.html'),
+      '',
+      'Or go directly to',
+      chalk.cyan('http://' + address() + ':5709'),
       ''
     ].join('\n')
   )
