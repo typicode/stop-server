@@ -23,7 +23,7 @@ __Important__ on __OS X__ and __Linux__ you need to allow `shutdown` command to 
 
 ```bash
 # Run 'sudo visudo' and add
-%users  localhost=/sbin/shutdown -h now
+your-username ALL=NOPASSWD: /sbin/shutdown
 ```
 
 ## Uninstall

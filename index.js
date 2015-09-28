@@ -25,7 +25,7 @@ app.post('/', function (req, res) {
       cmd = 'shutdown -s'
       break
     case 'linux':
-      cmd = 'sudo --non-interactive shutdown -h now'
+      cmd = 'sudo shutdown -h now'
       break
     case 'darwin':
       cmd = 'sudo shutdown -h now'
