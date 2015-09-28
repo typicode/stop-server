@@ -18,9 +18,21 @@ app.delete('/', function (req, res) {
 })
 
 app.post('/', function (req, res) {
-  var cmd = process.platform === 'win32' ?
-    'shutdown -s' :
-    'sudo --non-interactive poweroff'
+  var cmd
+
+  switch (process.platform) {
+    case 'win32':
+      cmd = 'shutdown -s'
+      break
+    case 'linux':
+      cmd = 'sudo --non-interactive poweroff'
+      break
+    case 'darwin':
+      cmd = 'sudo shutdown -h now'
+      break
+    default:
+      throw new Error('Unknown OS')
+  }
 
   util.log('Running ' + cmd)
 

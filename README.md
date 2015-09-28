@@ -19,11 +19,16 @@ _Created because I usually watch movies on my computer from my bed and I wanted 
 
 3. That's all :)
 
-__Important__ on __OS X__ and __Linux__ you need to allow the `poweroff` command to be used without admin password:
+__Important__ on __OS X__ and __Linux__ you need to allow `shutdown` or `poweroff` command to be used without admin password:
 
 ```bash
-# Run 'sudo visudo' and add
-your-username ALL=NOPASSWD: /sbin/poweroff
+# On OS X, run 'sudo visudo' and uncomment/add
+%users  localhost=/sbin/shutdown -h now
+```
+
+```bash
+# On Linux, run 'sudo visudo' and add
+your-username ALL=NOPASSWD: /sbin/poweroff # Linux
 ```
 
 ## Uninstall
@@ -34,7 +39,7 @@ npm rm -g stop-server
 
 ## How it works?
 
-stop-server is a simple Express server. When you call `DELETE http://your-local-ip:5709`, it runs `poweroff` (OS X, Linux) or `shutdown` (Windows).
+stop-server is a simple Express server. When you call `POST http://your-local-ip:5709`, it runs `poweroff` or `shutdown` command depending on the OS.
 
 stop-server is automatically started on log in using [user-startup](https://github.com/typicode/user-startup).
 
