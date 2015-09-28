@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.delete('/', function (req, res) {
   res.end()
-  util.log('Exit')
+  util.log('exit')
   process.exit()
 })
 
@@ -25,7 +25,7 @@ app.post('/', function (req, res) {
       cmd = 'shutdown -s'
       break
     case 'linux':
-      cmd = 'sudo --non-interactive poweroff'
+      cmd = 'sudo shutdown -h now'
       break
     case 'darwin':
       cmd = 'sudo shutdown -h now'
@@ -34,11 +34,15 @@ app.post('/', function (req, res) {
       throw new Error('Unknown OS')
   }
 
-  util.log('Running ' + cmd)
+  util.log('running ' + cmd)
 
   cp.exec(cmd, function (err, stderr, stdout) {
-    if (err) return res.status(500).json({ error: 'Can\'t run ' + cmd })
-    res.end()
+    if (err) {
+      util.log(err)
+      res.status(500).json({ error: 'Can\'t run shutdown command' })
+    } else {
+      res.end()
+    }
   })
 })
 
