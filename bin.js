@@ -28,7 +28,7 @@ function start () {
         '',
         '---',
         'To complete installation, you need to allow \'shutdown\' to be run without sudo.',
-        'Please run ' + chalk.cyan('sudo visudo') + ' and add ' + chalk.cyan('%users  localhost=/sbin/shutdown -h now'),
+        'Please run ' + chalk.cyan('sudo visudo') + ' and add ' + chalk.cyan('your-username ALL=NOPASSWD: /sbin/shutdown'),
         '---'
       ].join('\n')
     )
