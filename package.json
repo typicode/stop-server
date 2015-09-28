@@ -1,6 +1,6 @@
 {
   "name": "stop-server",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Stop your computer using your phone or your tablet, from your bed or your couch",
   "main": "index.js",
   "bin": "bin.js",
