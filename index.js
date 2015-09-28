@@ -1,9 +1,9 @@
 var path = require('path')
-var cp = require('child_process')
 var util = require('util')
 var express = require('express')
 var address = require('network-address')
 var updateNotifier = require('update-notifier')
+var powerOff = require('power-off')
 var pkg = require('./package.json')
 
 var app = express()
@@ -18,28 +18,10 @@ app.delete('/', function (req, res) {
 })
 
 app.post('/', function (req, res) {
-  var cmd
-
-  switch (process.platform) {
-    case 'win32':
-      cmd = 'shutdown -s'
-      break
-    case 'linux':
-      cmd = 'sudo shutdown -h now'
-      break
-    case 'darwin':
-      cmd = 'sudo shutdown -h now'
-      break
-    default:
-      throw new Error('Unknown OS')
-  }
-
-  util.log('running ' + cmd)
-
-  cp.exec(cmd, function (err, stderr, stdout) {
+  powerOff(function (err, stderr, stdout) {
     if (err) {
       util.log(err)
-      res.status(500).json({ error: 'Can\'t run shutdown command' })
+      res.status(500).json({ error: 'Can\'t run shutdown' })
     } else {
       res.end()
     }
