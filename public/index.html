@@ -14,7 +14,7 @@
       </div>
       <p>Touch to shutdown this computer</p>
       <footer>
-        <a href="https://github.com/typicode/stop-server">stop-server v0.1.0</a>
+        <a href="https://github.com/typicode/stop-server">stop-server v0.2.0</a>
       </footer>
     </div>
 
@@ -31,7 +31,7 @@
 
       })
 
-      $.get('update', function (data) {
+      $.get('update', function (update) {
         if (update.type && update.type !== 'latest') {
           $('#footer').append('(new version available)')
         }
