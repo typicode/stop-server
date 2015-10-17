@@ -15,7 +15,7 @@ _Created because I usually watch movies on my computer from my bed and I wanted 
 
 2. Visit [http://localhost:5709/qr.html](http://localhost:5709/qr.html) on your computer and scan the QR code or go directly to `http://your-local-ip:5709` __on your phone__. You should see this page:
 
-  ![](http://i.imgur.com/lWW1LTE.png)
+  ![](http://i.imgur.com/ywuj9Ge.png)
 
 3. That's all :)
 
@@ -34,7 +34,12 @@ npm rm -g stop-server
 
 ## How it works?
 
-stop-server is a simple Express server. When you call `POST http://your-local-ip:5709`, it runs `shutdown`.
+stop-server is a simple Express server with a few routes:
+
+```
+POST http://your-local-ip:5709/power-off
+POST http://your-local-ip:5709/sleep
+```
 
 It's also automatically started on log in using [user-startup](https://github.com/typicode/user-startup).
 

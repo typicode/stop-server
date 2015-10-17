@@ -3,30 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>stop-server</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/flatly/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-
-    <p>
-      <div id="qrcode"></div>
-    </p>
-    <p>
-      Scan this QR code or go to <span id="url"></span> on your phone/tablet
-    </p>
-
-    <footer>
-      <a href="https://github.com/typicode/stop-server">stop-server v0.2.0</a>
-    </footer>
+    <div class="container">
+      <p>
+        <div id="qrcode"></div>
+      </p>
+      <p>
+        Scan this QR code or go to<br>
+        <span id="url"></span><br>
+        on your phone or tablet.
+      </p>
+    </div>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
     <script>
-
-      $
-        .get('/address')
+      $.get('/address')
         .done(function (data) {
           var address = data.address
-          var url = 'http://' + address + ':5709/'
+          var url = 'http://' + address + ':5709'
           var a = '<a href="' + url + '">' + url + '</a>'
           $('#qrcode').qrcode(url)
           $('#url').html(a)
@@ -34,7 +32,6 @@
         .fail(function () {
           alert('Can\'t get server address')
         })
-
     </script>
   </body>
 </html>
