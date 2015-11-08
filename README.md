@@ -15,15 +15,16 @@ _Created because I usually watch movies on my computer from my bed and I wanted 
 
 2. Visit [http://localhost:5709/qr.html](http://localhost:5709/qr.html) on your computer and scan the QR code or go directly to `http://your-local-ip:5709` __on your phone__. You should see this page:
 
-  ![](http://i.imgur.com/ywuj9Ge.png)
+  ![](http://i.imgur.com/4WadpZc.png)
 
 3. That's all :)
 
-__Important__ on __OS X__ and __Linux__ you need to allow `shutdown` command to be used without sudo:
+__Important__ depending on your OS, you need to allow commands to be used without sudo:
 
 ```bash
 # Run 'sudo visudo' and add
-your-username ALL=NOPASSWD: /sbin/shutdown
+your-username ALL=NOPASSWD: /sbin/shutdown       # OS X and Linux
+your-username ALL=NOPASSWD: /usr/sbin/pm-suspend # Linux only
 ```
 
 ## Uninstall
