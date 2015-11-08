@@ -6,6 +6,7 @@
   "bin": "bin.js",
   "scripts": {
     "test": "node test",
+    "start": "node index",
     "uninstall": "node bin stop"
   },
   "repository": {
@@ -17,6 +18,7 @@
     "shutdown",
     "halt",
     "poweroff",
+    "sleep",
     "server"
   ],
   "author": "typicode <typicode@gmail.com>",
@@ -31,6 +33,7 @@
     "got": "^4.1.1",
     "network-address": "^1.0.0",
     "power-off": "^1.0.0",
+    "sleep-mode": "^1.1.0",
     "sudo-block": "^1.2.0",
     "update-notifier": "^0.5.0",
     "user-startup": "^0.1.0",

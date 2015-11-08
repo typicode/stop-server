@@ -4,6 +4,7 @@ var express = require('express')
 var address = require('network-address')
 var updateNotifier = require('update-notifier')
 var powerOff = require('power-off')
+var sleepMode = require('sleep-mode')
 var pkg = require('./package.json')
 
 var app = express()
@@ -17,11 +18,22 @@ app.delete('/', function (req, res) {
   process.exit()
 })
 
-app.post('/', function (req, res) {
+app.post('/power-off', function (req, res) {
   powerOff(function (err, stderr, stdout) {
     if (err) {
       util.log(err)
-      res.status(500).json({ error: 'Can\'t run shutdown' })
+      res.status(500).json({ error: 'Can\'t run power-off' })
+    } else {
+      res.end()
+    }
+  })
+})
+
+app.post('/sleep', function (req, res) {
+  sleepMode(function (err, stderr, stdout) {
+    if (err) {
+      util.log(err)
+      res.status(500).json({ error: 'Can\'t run sleep' })
     } else {
       res.end()
     }
@@ -33,7 +45,13 @@ app.get('/address', function (req, res) {
 })
 
 app.get('/update', function (req, res) {
-  res.json(notifier.update || {})
+  updateNotifier({
+    pkg: pkg,
+    callback: function (err, update) {
+      if (err) return res.json({})
+      res.json(update)
+    }
+  })
 })
 
 var port = '5709'
