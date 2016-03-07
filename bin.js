@@ -23,18 +23,18 @@ function start () {
   startup.create('stop-server', process.execPath, [__dirname], log)
 
   if (os.platform() !== 'win32') {
-    process.stdout.write(
+    console.log(
       [
         '',
         '---',
         'To complete installation, you need to allow \'shutdown\' to be run without sudo.',
         'Please run ' + chalk.cyan('sudo visudo') + ' and add ' + chalk.cyan('your-username ALL=NOPASSWD: /sbin/shutdown'),
         '---'
-      ].join('\n') + '\n'
+      ].join('\n')
     )
   }
 
-  process.stdout.write(
+  console.log(
     [
       '',
       'To access stop-server from your phone, scan the QR code here',
@@ -43,7 +43,7 @@ function start () {
       'Or go directly to',
       chalk.cyan('http://' + address() + ':5709'),
       ''
-    ].join('\n') + '\n'
+    ].join('\n')
   )
 }
 
@@ -58,4 +58,4 @@ var argv = yargs.argv
 if (argv._[0] === 'start') return start()
 if (argv._[0] === 'stop') return stop()
 
-process.stdout.write(yargs.showHelp)
+console.log(yargs.showHelp)
