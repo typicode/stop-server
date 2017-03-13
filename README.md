@@ -2,21 +2,18 @@
 
 > Shut down your computer with your phone :iphone: (works on OS X, Linux and Windows)
 
+## Install
+
+```sh
+npm install -g stop-server
+stop-server start # Need to be done only once
+```
+
 ## Usage
 
-1. Install `stop-server`
+Visit [`http://your-local-ip:5709`](http://localhost:5709/qr.html) __on your phone__. You should see this page:
 
-  ```bash
-  npm install -g stop-server
-  stop-server start # Need to be done only once
-  ```
-
-2. Visit [`http://your-local-ip:5709`](http://localhost:5709/qr.html) __on your phone__. You should see this page:
-
-  ![](http://i.imgur.com/4WadpZc.png)
-
-
-__Congrats!__ You're done :tada:
+![](http://i.imgur.com/4WadpZc.png)
 
 __Important__ if you're on OS X or Linux, you need to allow commands to be used without sudo:
 
