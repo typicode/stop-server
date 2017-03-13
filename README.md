@@ -1,8 +1,6 @@
 # stop-server [![](https://badge.fury.io/js/stop-server.svg)](https://www.npmjs.com/package/stop-server) [![](https://travis-ci.org/typicode/stop-server.svg?branch=master)](https://travis-ci.org/typicode/stop-server)
 
-> Shut down your computer using Node.js and your phone :iphone: (works on OS X, Linux and Windows)
-
-_Created because I usually watch movies on my computer from my bed and I wanted to be able to shut it down remotely :)_
+> Shut down your computer with your phone :iphone: (works on OS X, Linux and Windows)
 
 ## Usage
 
@@ -17,7 +15,8 @@ _Created because I usually watch movies on my computer from my bed and I wanted 
 
   ![](http://i.imgur.com/4WadpZc.png)
 
-3. __Congrats!__ You're done :tada:
+
+__Congrats!__ You're done :tada:
 
 __Important__ if you're on OS X or Linux, you need to allow commands to be used without sudo:
 
@@ -37,15 +36,13 @@ npm rm -g stop-server
 
 ## How it works?
 
-stop-server is a simple Express server with a few routes:
+`stop-server` is a simple Express server with only 2 routes:
 
 ```
 POST http://your-local-ip:5709/power-off
 POST http://your-local-ip:5709/sleep
 ```
 
-It's also automatically started on log in using [user-startup](https://github.com/typicode/user-startup).
-
 ## License
 
-MIT - [typicode](https://github.com/typicode/stop-server)
+MIT - [typicode :cactus:](https://github.com/typicode/stop-server)
