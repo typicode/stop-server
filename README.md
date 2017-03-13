@@ -1,6 +1,6 @@
 # stop-server [![](https://badge.fury.io/js/stop-server.svg)](https://www.npmjs.com/package/stop-server) [![](https://travis-ci.org/typicode/stop-server.svg?branch=master)](https://travis-ci.org/typicode/stop-server)
 
-> Shut down :zap: your computer using Node.js and a phone (works on OS X, Linux and Windows)
+> Shut down your computer using Node.js and your phone :iphone: (works on OS X, Linux and Windows)
 
 _Created because I usually watch movies on my computer from my bed and I wanted to be able to shut it down remotely :)_
 
@@ -17,9 +17,7 @@ _Created because I usually watch movies on my computer from my bed and I wanted 
 
   ![](http://i.imgur.com/4WadpZc.png)
 
-  Tip: you can get a QR code pointing to the URL above http://localhost:5709/qr.html
-
-3. Congrats! You're done :tada:
+3. __Congrats!__ You're done :tada:
 
 __Important__ if you're on OS X or Linux, you need to allow commands to be used without sudo:
 
@@ -28,6 +26,8 @@ __Important__ if you're on OS X or Linux, you need to allow commands to be used 
 your-username ALL=NOPASSWD: /sbin/shutdown       # OS X and Linux
 your-username ALL=NOPASSWD: /usr/sbin/pm-suspend # Linux only
 ```
+
+__Tip__ for easier access, you can get a QR code by going to [http://localhost:5709/qr.html](http://localhost:5709/qr.html) from your computer
 
 ## Uninstall
 
