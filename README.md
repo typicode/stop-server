@@ -13,13 +13,15 @@ _Created because I usually watch movies on my computer from my bed and I wanted 
   stop-server start # Need to be done only once
   ```
 
-2. Visit [http://localhost:5709/qr.html](http://localhost:5709/qr.html) on your computer and scan the QR code or go directly to `http://your-local-ip:5709` __on your phone__. You should see this page:
+2. Visit [`http://your-local-ip:5709`](http://localhost:5709/qr.html) __on your phone__. You should see this page:
 
   ![](http://i.imgur.com/4WadpZc.png)
 
-3. That's all :)
+  Tip: you can get a QR code pointing to the URL above http://localhost:5709/qr.html
 
-__Important__ depending on your OS, you need to allow commands to be used without sudo:
+3. Congrats! You're done :tada:
+
+__Important__ if you're on OS X or Linux, you need to allow commands to be used without sudo:
 
 ```bash
 # Run 'sudo visudo' and add
