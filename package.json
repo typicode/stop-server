@@ -7,7 +7,8 @@
   "scripts": {
     "test": "node test",
     "start": "node index",
-    "uninstall": "node bin stop"
+    "uninstall": "node bin stop",
+    "prepublish": "pkg-ok"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,7 @@
     "express": "^4.13.3",
     "got": "^4.1.1",
     "network-address": "^1.0.0",
+    "pkg-ok": "^1.0.1",
     "power-off": "^1.0.0",
     "sleep-mode": "^1.1.0",
     "sudo-block": "^1.2.0",
