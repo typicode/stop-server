@@ -6,6 +6,9 @@
 
 ```sh
 npm install -g stop-server
+```
+
+```sh
 stop-server start # Need to be done only once
 ```
 
