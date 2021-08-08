@@ -7,7 +7,7 @@ body {
   display: block;
 }
 
-.btn:first-of-type {
+.btn/*:first-of-type*/ {
   margin-top: 10px;
   margin-bottom: 20px;
 }
