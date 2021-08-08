@@ -16,7 +16,9 @@
       <div id="sleep" class="btn btn-info btn-lg">
         Sleep
       </div>
-
+      <div id="reboot" class="btn btn-info btn-lg">
+        Reboot
+      </div>
       <footer>
         <a href="https://github.com/typicode/stop-server">stop-server v0.2.0</a>
       </footer>
@@ -40,6 +42,10 @@
 
       $('#sleep').on('click', function () {
         post('/sleep')
+      })
+
+      $('#reboot').on('click', function () {
+        post('/reboot')
       })
 
       $.get('update', function (update) {

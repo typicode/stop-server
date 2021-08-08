@@ -5,7 +5,9 @@ var address = require('network-address')
 var updateNotifier = require('update-notifier')
 var powerOff = require('power-off')
 var sleepMode = require('sleep-mode')
+var exec = require('child_process').exec
 var pkg = require('./package.json')
+
 
 var app = express()
 var notifier = updateNotifier({ pkg: pkg })
@@ -34,6 +36,18 @@ app.post('/sleep', function (req, res) {
     if (err) {
       util.log(err)
       res.status(500).json({ error: 'Can\'t run sleep' })
+    } else {
+      res.end()
+    }
+  })
+})
+
+app.post('/reboot', function (req, res) {
+  var cmd = (process.platform === 'win32') ? 'shutdown -r' : 'sudo shutdown -r now'
+  exec(cmd, function (err, stdout, stderr) {
+    if (err) {
+      util.log(err)
+      res.status(500).json({ error: 'Can\'t reboot' })
     } else {
       res.end()
     }
